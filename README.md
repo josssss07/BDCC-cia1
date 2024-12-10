@@ -13,5 +13,6 @@ This study aims to evaluate the performance of various Python implementations (e
 - JPython (python implemented in java)
 - PyPy (Alternative python that uses a Just-In-Time compiler)
 - Cython (converts python like code to C)
+- C (to set a standard benchmark)
 
 ### 
