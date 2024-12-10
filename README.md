@@ -15,4 +15,4 @@ This study aims to evaluate the performance of various Python implementations (e
 - Cython (converts python like code to C)
 - C (to set a standard benchmark)
 
-### 
+### Profiling and parallelization (& cuda if i understand) goes here
