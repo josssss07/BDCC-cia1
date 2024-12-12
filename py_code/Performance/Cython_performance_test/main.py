@@ -4,21 +4,12 @@ import platform
 import sys
 
 
-'''Pure recursive Fibonacci function for stress testing'''
-def fibonacchi(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    return fibonacchi(n - 1) + fibonacchi(n - 2)
-
-
 '''Run a benchmark on the Fibonacci function'''
 def run_benchmark(implementation_name):
-    setup_code = "from __main__ import fibonacchi"
+    setup_code = "from fibonacci import fibonacchi"  # Import from the compiled Cython module
 
     # Test cases chosen to stress the recursive implementation
-    test_cases = [20, 25, 35]
+    test_cases = [20, 25, 30]
     results = {}
 
     for complexity in test_cases:
@@ -26,7 +17,7 @@ def run_benchmark(implementation_name):
             timeit.timeit(
                 f"fibonacchi({complexity})",
                 setup=setup_code,
-                number= 10#
+                number=10  # Only one run per trial due to recursion's high cost
             ) for _ in range(5)
         ]
         results[complexity] = {

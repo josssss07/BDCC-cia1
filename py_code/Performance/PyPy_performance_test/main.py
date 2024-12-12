@@ -18,7 +18,7 @@ def run_benchmark(implementation_name):
     setup_code = "from __main__ import fibonacchi"
 
     # Test cases chosen to stress the recursive implementation
-    test_cases = [20, 25, 30]
+    test_cases = [20, 25, 35]
     results = {}
 
     for complexity in test_cases:
