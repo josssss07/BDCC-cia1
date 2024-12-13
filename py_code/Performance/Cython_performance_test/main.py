@@ -6,7 +6,7 @@ import sys
 
 '''Run a benchmark on the Fibonacci function'''
 def run_benchmark(implementation_name):
-    setup_code = "from fibonacci import fibonacchi"  # Import from the compiled Cython module
+    setup_code = "from fibo import fibonacchi"  # Import from the compiled Cython module
 
     # Test cases chosen to stress the recursive implementation
     test_cases = [20, 25, 30]

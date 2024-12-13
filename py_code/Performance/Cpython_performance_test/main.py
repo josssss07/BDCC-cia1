@@ -26,7 +26,7 @@ def run_benchmark(implementation_name):
             timeit.timeit(
                 f"fibonacchi({complexity})",
                 setup=setup_code,
-                number= 10#
+                number= 4
             ) for _ in range(5)
         ]
         results[complexity] = {
