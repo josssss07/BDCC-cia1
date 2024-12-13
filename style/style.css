@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(235, 222, 203);
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.intro h1{
+    margin: 2px;
+    padding: 2px;
+    /* color: #094954; */
+}
+

@@ -1,21 +1,12 @@
-# BDCC cia 1 project 
+## Project overview:
 
-## Objective: Perform a comparitive study of python performance and with parallelization 
+The study aims to evaluate the performance between the various implementation of python.
+In particular it looks at : 
+- CPython (the standard implementation of python)
+- Cython (an implementaion which convernts python into C code)
+- Pypy (an implementation of python with a just in time complier)
+<!-- #TODO: ADD ONE MORE PYTHON IMEPLEMENTATION LATER -->
 
-## Overview and details 
+## Part 1: Performance comparison of the various python imeplementations: 
 
-This study aims to evaluate the performance of various Python implementations (e.g., CPython, PyPy, Jython) by measuring processing speed and analyzing the impact of parallelization on algorithm execution. The tasks are divided into two main objectives: comparing Python implementations and investigating the effects of parallelization.
-
-### Part 1: 
- - Performance Comparison 
- - Algorithm Parallelization
-
-
-### Languages used for benchmarking: 
-
-- CPython (standard implementation) 
-- JPython (python implemented in java)
-- PyPy (Alternative python that uses a Just-In-Time compiler)
-- Cython (converts python like code to C)
-
-###         
+To test the performance of the various flavors of python, I picked the fibonacci series
