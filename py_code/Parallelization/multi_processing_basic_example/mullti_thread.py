@@ -3,11 +3,11 @@ import timeit
 
 
 def print_cube(num):
-    return f"Cube = {num * num * num}"
+    return print(f"Cube = {num * num * num}")
 
 
 def print_square(num):
-    return f"Square = {num * num}"
+    return print(f"Square = {num * num}")
 
 
 def sort_words(word_list):
