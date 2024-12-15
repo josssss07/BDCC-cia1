@@ -1,12 +1,5 @@
-## Project overview:
+## Section 1: Performance: 
 
-The study aims to evaluate the performance between the various implementation of python.
-In particular it looks at : 
-- CPython (the standard implementation of python)
-- Cython (an implementaion which convernts python into C code)
-- Pypy (an implementation of python with a just in time complier)
-<!-- #TODO: ADD ONE MORE PYTHON IMEPLEMENTATION LATER -->
-
-## Part 1: Performance comparison of the various python imeplementations: 
-
-To test the performance of the various flavors of python, I picked the fibonacci series
+In this section we will look at the performance and speed of execution of various variants of python 
+For this test, all variants had to execute a script that would solve the fibonacci series through a set number of iterations. 
+The test was timed with the use of the timeit library and each variant executed the test 3 times to get a gague of the results. 

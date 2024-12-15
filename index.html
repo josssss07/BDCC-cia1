@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,501,700,701,900,901&display=swap" rel="stylesheet">
     <title>BDCC CIA 1 Project</title>
 </head>
 <body>    
-    <div class="intro-wrapper">
-        <div class="intro">
-            <h1>BDCC CIA-1 Project</h1>
+    <section>
+        <div class="intro-wrapper">
+            <div class="intro">
+                <h1>BDCC CIA-1 Project</h1>
+            </div>
+            <div class="topic">
+                <h2>Topic: Python Performance analysis: A comparitive study with Parallelization</h2>
+            </div>
+            <div class="made-by">
+                <p class ="grid-item">Class: TY BSc-IT</p>
+                <p class ="grid-item">Name: Joshua Desai</p>
+                <p class ="grid-item">UID: 225084</p>
+                <p class ="grid-item">Subject: BDCC</p>
+            </div>
         </div>
-        <div class="topic">
-            <h2>Topic: Python Performance analysis: A comparitive study with Parallelization</h2>
-            <h3>TY BSc-IT </h3>
-            <h3>UID: 225084</h3>
-            <h3>Joshua Desai</h3>
+    </section>
+    <section class="section1">
+        <div class="overview">
+            <h2>Project overview:</h2>
+            <p>The study aims to evaluate the performance between the various implementation of python.
+            Along with a performance analysis, we also look into how using parallel processing can have an effect on the performance and I/O operations. Lastly looking at how the parallel processing affects the BigO notation. </p>
+            <p>For the performance section of the program we take a look at: </p>
+            <ul>
+                <li> CPython (the standard implementation of python)</li>
+                <li> Cython (an implementaion which convernts python into C code)</li>
+                <li> Pypy (an implementation of python with a just in time complier)</li>
+                <li> Jython (an impelmentation of python that runs with the java compiler and garbage collector)</li>
+            </ul>
         </div>
-    </div>
+    </section>
+   <section class="section2">
+    <h2>Section 1: Performance:</h2>
+    <p>In this section we will look at the performance and speed of execution of various variants of python 
+    For this test, all variants had to execute a script that would solve the fibonacci series through a set number of iterations. 
+    The test was timed with the use of the timeit library and each variant executed the test 3 times to get a gague of the results. </p>
+   </section>
+
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(235, 222, 203);
+    font-family: 'Satoshi', sans-serif;
 }
 
 .intro {
@@ -17,3 +17,24 @@ body{
     /* color: #094954; */
 }
 
+.topic{
+    display: flex;
+    justify-content: center;
+}
+
+.made-by{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 2px;
+    align-items: center;
+    justify-items: center;
+}
+
+.section1{
+    padding: 14px;
+}
+
+.section2{
+    padding: 14px;
+    margin: 6px;
+}
