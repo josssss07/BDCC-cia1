@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Satoshi', sans-serif;
+    font-size: 18px;
 }
 
 .intro {
@@ -37,4 +38,15 @@ body{
 .section2{
     padding: 14px;
     margin: 6px;
+}
+
+.section3{
+    padding: 14px;
+    margin: 6px;
+}
+
+.repo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

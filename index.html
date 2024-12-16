@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,501,700,701,900,901&display=swap" rel="stylesheet">
-    <title>BDCC CIA 1 Project</title>
+    <title>BDCC CIA 1</title>
 </head>
 <body>    
     <section>
@@ -13,8 +13,13 @@
             <div class="intro">
                 <h1>BDCC CIA-1 Project</h1>
             </div>
+            <div class="repo">
+                <h4><a href="https://github.com/josssss07/BDCC-cia1">Github repository</a></h4>
+
+            </div>
             <div class="topic">
                 <h2>Topic: Python Performance analysis: A comparitive study with Parallelization</h2>
+               
             </div>
             <div class="made-by">
                 <p class ="grid-item">Class: TY BSc-IT</p>
@@ -88,8 +93,38 @@
             If speed is critical, alternatives like Cython or PyPy should be considered instead of CPython.
             Each implementation has trade-offs, such as compatibility, ease of use, and integration with other systems.
         </p>
+        <h4>Example:</h4>
+        <p>
+            Imagine you're processing a large dataset with Python. Using:
+        </p>
+        <ul>
+            <li>CPython: Execution will be slower but fully compatible with most Python libraries.
+            </li>
+            <li>
+                Cython: You can achieve a significant speed-up by compiling your data processing functions into C code.
+            </li>
+            <li>
+                PyPy: Speeds up the execution if you're running the script repeatedly with many iterations.
+            </li>
+        </ul>
+        <p>The main choice of implementaion depends on the usecase and the performance requirement and need</p>
+    </section >
+
+    <section class="section3">
+        <h2>Section 2: Parallelization</h2>
+        <div>
+            <p>In this section we will look at what is Parallelization, multithreading, some usecases with an example and what is cuda</p>
+            <p>
+                Parallelization is the process of splitting tasks into smaller sub-tasks and running them simultaneously across multiple CPUs or cores.
+                It is typically achieved using the multiprocessing module in Python, which creates multiple processes, each with its own memory space.
+                Suitable for CPU-bound tasks (e.g., numerical computations, simulations) because multiple processes can run on separate cores without being restricted by the Global Interpreter Lock (GIL).
+            </p>
+            <p>
+                Multithreading allows multiple threads to run concurrently within a single process, sharing the same memory space.
+                Python's threading module is used for multithreading, but threads are limited by the GIL, so they can't truly run in parallel for CPU-bound tasks.
+                Best suited for I/O-bound tasks (e.g., reading files, making API calls), where the program waits for external resources.
+            </p>
+        </div>
     </section>
-
-
 </body>
 </html>
