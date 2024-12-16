@@ -39,11 +39,56 @@
         </div>
     </section>
    <section class="section2">
-    <h2>Section 1: Performance:</h2>
-    <p>In this section we will look at the performance and speed of execution of various variants of python 
-    For this test, all variants had to execute a script that would solve the fibonacci series through a set number of iterations. 
-    The test was timed with the use of the timeit library and each variant executed the test 3 times to get a gague of the results. </p>
-   </section>
+        <h2>Section 1: Performance:</h2>
+        <p>In this section we will look at the performance and speed of execution of various variants of python 
+        For this test, all variants had to execute a script that would solve the fibonacci series through a set number of iterations. 
+        The test was timed with the use of the timeit library and each variant executed the test 3 times to get a gague of the results. </p>
+        <p>Below are the performance for the tests run for CPython:</p>
+        <div class="three-images">
+            <img src="./site_image_files/cpython_test1.png" alt="cpython_test1" height="200" width="400">
+            <img src="./site_image_files/cpython_test2.png" alt="cpython_test1"height="200" width="400">
+            <img src="./site_image_files/cpython_test3.png" alt="cpython_test1"height="200" width="400">
+        </div>
+        <p>The following are the performance for the test runs of Pypy</p>
+        <div class="three-images">
+            <img src="./site_image_files/pypy3_test1.png" alt="pypy3_test1" height="200" width="400">
+            <img src="./site_image_files/pypy3_test2.png" alt="pypy3_test1" height="200" width="400">
+            <img src="./site_image_files/pypy3_test3.png" alt="pypy3_test1" height="200" width="400">   
+        </div>
+        <p>The following are the performance for the test runs of Cython</p>
+        <div class="three-images">
+            <img src="./py_code/Performance/Cython_performance_test/images/cython_test1.png" alt="Cython_tests" height="200" width="400">
+            <img src="./py_code/Performance/Cython_performance_test/images/cython_test1.png" alt="Cython_tests" height="200" width="400">
+            <img src="./py_code/Performance/Cython_performance_test/images/cython_test1.png" alt="Cython_tests" height="200" width="400">
+        </div>
+        <p>The following are the performance for the test runs of Jython</p>
+        <div class="three-images">
+            <img src="./py_code/Performance/Jython_performance_test/images/jython_test1.png" alt="jython_test_runs" height="200" width="400">
+            <img src="./py_code/Performance/Jython_performance_test/images/jython_test2.png" alt="jython_test_runs" height="200" width="400">
+            <img src="./py_code/Performance/Jython_performance_test/images/jython_test3.png" alt="jython_test_runs" height="200" width="400">   
+        </div>
+
+        <ol>
+            <li>The standard implementaion of Python (Cpython) has the slowest performance compared to the variants of python</li>
+            <li>The fastest variant was Cython, with Pypy in second and Jython in third</li>
+        </ol>
+        <p><b> <ul> Overall we can see the following:</ul></b> </p>
+        <p>CPython is the default and most widely-used implementation of Python. It's written in C and focuses on compatibility and ease of use rather than speed.</p>
+        <p>Cython allows Python code to be compiled into C, making it faster by converting Python code into highly efficient C code.
+            This is particularly useful for computationally intensive tasks like mathematical operations or data processing.</p>
+        <p>
+            PyPy is an alternative implementation of Python with a Just-In-Time (JIT) compiler that optimizes the execution of code during runtime.
+            It is generally faster than CPython for long-running programs because it compiles frequently used parts of code into machine language.
+        </p>
+        <p>
+            Jython is a Python implementation that runs on the Java Virtual Machine (JVM). It allows Python code to interoperate with Java code but isn't as fast as Cython or PyPy.
+        </p>
+        <p>
+            Python's performance varies greatly depending on the implementation.
+            If speed is critical, alternatives like Cython or PyPy should be considered instead of CPython.
+            Each implementation has trade-offs, such as compatibility, ease of use, and integration with other systems.
+        </p>
+    </section>
 
 
 </body>
