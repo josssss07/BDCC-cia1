@@ -27,3 +27,8 @@ To demonstate this, a recurive fibonacci function was used
 
 This section focused on how the use of mulithreading and profiling of code can help with an improved execution time. This also allowed us to look into the BigO notation and does it hold constant if a program has multithreading involved. 
 Various mini scripts were used to demo this that can be found in their respective folders along with screenshots of their execution 
+
+### Part 3: Analysis on BigO notation and parallelization 
+
+The final section looks at and explains how the BigO notation is effected by multithreaded operations and parallelization 
+

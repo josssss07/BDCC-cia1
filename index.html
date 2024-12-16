@@ -111,7 +111,8 @@
     </section >
 
     <section class="section3">
-        <h2>Section 2: Parallelization</h2>
+        <h2>Section 2: Parallelization, Multithreading, Profiling and Cuda </h2>
+        <h5>Theory:</h5>
         <div>
             <p>In this section we will look at what is Parallelization, multithreading, some usecases with an example and what is cuda</p>
             <p>
@@ -123,6 +124,58 @@
                 Multithreading allows multiple threads to run concurrently within a single process, sharing the same memory space.
                 Python's threading module is used for multithreading, but threads are limited by the GIL, so they can't truly run in parallel for CPU-bound tasks.
                 Best suited for I/O-bound tasks (e.g., reading files, making API calls), where the program waits for external resources.
+            </p>
+            <p>
+
+Profiling:
+Profiling is the process of analyzing the performance of a program to identify bottlenecks, inefficient code, and resource usage (CPU, memory, I/O, etc.).
+It helps optimize the program by showing where the most time or resources are spent.
+Implementation in Python:
+
+Tools like cProfile, line_profiler, or third-party libraries such as Py-Spy are commonly used.
+            </p>
+            <p>
+                CUDA:
+                CUDA (Compute Unified Device Architecture) is a parallel computing platform and API by NVIDIA for utilizing GPUs (Graphics Processing Units) for general-purpose computing.
+                It allows Python (or other languages) to offload intensive computations to the GPU, leveraging thousands of GPU cores for faster performance.
+                Implementation in Python:
+                            
+                Python libraries like PyCUDA, CuPy, or Numba are used to write and execute CUDA kernels.
+                GPU-accelerated libraries such as TensorFlow or PyTorch often use CUDA under the hood.
+                Key Difference:
+                Profiling: Focuses on measuring and optimizing the performance of a program.
+                CUDA: A platform for accelerating computations using NVIDIA GPUs.
+            </p>
+            <p>
+                Where CUDA Can Be Used:
+                CUDA is primarily used in areas where computational tasks are highly parallelizable. Examples include:
+
+                Machine Learning and Deep Learning:
+
+                Training neural networks (e.g., TensorFlow, PyTorch).
+                Speeding up tasks like matrix multiplications and backpropagation.
+                Scientific Simulations:
+
+                Weather forecasting, molecular dynamics, or particle simulations.
+                Image and Video Processing:
+
+                Real-time object detection, video encoding/decoding, and 3D rendering.
+                Financial Modeling:
+
+                Monte Carlo simulations, risk analysis, or high-frequency trading.
+                Big Data Analytics:
+
+                Accelerating database queries and data transformations (e.g., RAPIDS for GPU-accelerated data analysis).
+                Cryptography:
+
+                Hash computations, password cracking, or blockchain mining.
+                Real-World Scenario: Performance Gain with CUDA
+                Task: Matrix Multiplication (common in machine learning and numerical simulations).
+                We compare the performance of matrix multiplication using CPU (NumPy) and GPU (CUDA via CuPy).
+            </p>
+
+            <p>
+                Looking at multithreading in depth, 
             </p>
         </div>
     </section>
