@@ -211,6 +211,49 @@ Parallel Merge Sort takes advantage of modern multi-core CPUs, where each core c
         </div>
     </section>
 
+    <section>
+        <div class="bigO">
+            <h2>Does Big O scale with Parallelization</h2>
+            <p>Big O notation measures the growth of an algorithm's time or space complexity with respect to input size. It assumes a single-threaded execution model and does not inherently account for parallelization. However, parallelization can reduce the constant factors or the effective input size, which may improve real-world performance.
+
+                For example, an 
+                𝑂
+                (
+                𝑛
+                )
+                O(n) algorithm parallelized across 
+                𝑝
+                p processors could process roughly 
+                𝑛
+                /
+                𝑝
+                n/p elements per thread, appearing faster but still 
+                𝑂
+                (
+                𝑛
+                )
+                O(n) in Big O terms. For certain algorithms like divide-and-conquer, parallelization may reduce the Big O complexity (e.g., reducing 
+                𝑂
+                (
+                𝑛
+                2
+                )
+                O(n 
+                2
+                 ) to 
+                𝑂
+                (
+                𝑛
+                log
+                ⁡
+                𝑛
+                )
+                O(nlogn)) by restructuring computation.
+                
+                In short, Big O does not directly scale with parallelization, but effective performance and even complexity may improve depending on the algorithm and hardware.</p>
+        </div>
+    </section>
+
 
     <script>
         // Chart Data
