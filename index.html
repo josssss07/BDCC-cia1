@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,501,700,701,900,901&display=swap" rel="stylesheet">
     <title>BDCC CIA 1</title>
 </head>
@@ -108,6 +109,8 @@
             </li>
         </ul>
         <p>The main choice of implementaion depends on the usecase and the performance requirement and need</p>
+        <!-- <h3>Some performance charts </h3>
+        <canvas id="performanceChart"></canvas> -->
     </section >
 
     <section class="section3">
@@ -175,9 +178,241 @@ Tools like cProfile, line_profiler, or third-party libraries such as Py-Spy are 
             </p>
 
             <p>
-                Looking at multithreading in depth, 
+                Looking at multithreading in depth, we can use the example of merege sort and parallel merge sort: 
             </p>
+
+            <p>
+                Parallel Merge Sort is an enhancement of the traditional Merge Sort algorithm that leverages parallel computing to divide the workload across multiple threads or processes. This allows different parts of the array to be sorted simultaneously, making it faster for large datasets when executed on multi-core processors.
+            </p>
+            <p>
+                Why is parallel merge sort faster than the traditional merge sort?
+            </p>
+            <p>
+                Divide-and-Conquer in Parallel:
+
+Traditional Merge Sort divides the array into smaller subarrays recursively and processes them sequentially.
+Parallel Merge Sort assigns different threads or processes to sort each subarray simultaneously, reducing the time spent in the sorting phase.
+Parallel Merging:
+
+The merging phase can also be parallelized by dividing the merging process among threads, further optimizing performance.
+Utilization of Multi-core Processors:
+
+Parallel Merge Sort takes advantage of modern multi-core CPUs, where each core can handle part of the computation independently.
+            </p>
+
+            <p>Parallel merge sort vs Regular merege sort:</p>
+
+            <canvas id="mergeSortChart"></canvas>
+
+            <P>Paralle martix multipliation vs sequential</P>
+
+            <canvas id="matrixMultiplicationChart"></canvas>
+             
         </div>
     </section>
+
+
+    <script>
+        // Chart Data
+        const data = {
+            labels: ['10,000', '100,000', '1,000,000', '10,000,000'], // Array sizes
+            datasets: [
+                {
+                    label: 'Sequential Merge Sort (seconds)',
+                    data: [0.03, 0.30, 3.5, 40], // Timings for sequential
+                    backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red color
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Parallel Merge Sort (seconds)',
+                    data: [0.04, 0.18, 1.2, 14], // Timings for parallel
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue color
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }
+            ]
+        };
+
+        // Chart Options
+        const options = {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top', // Position of the legend
+                },
+                title: {
+                    display: true,
+                    text: 'Comparison of Merge Sort Algorithms'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Time (seconds)'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Array Size'
+                    }
+                }
+            }
+        };
+
+        // Initialize Chart.js
+        const ctx = document.getElementById('mergeSortChart').getContext('2d');
+        const mergeSortChart = new Chart(ctx, {
+            type: 'bar', // Bar chart type
+            data: data,
+            options: options
+        });
+    </script>
+    
+
+    <script>
+        // Chart Data
+        const data2 = {
+            labels: ['100 x 100', '500 x 500', '1000 x 1000', '2000 x 2000'], // Matrix sizes
+            datasets: [
+                {
+                    label: 'Sequential Processing (seconds)',
+                    data: [0.02, 0.35, 3.0, 22.0], // Timings for sequential
+                    backgroundColor: 'rgba(255, 159, 64, 0.6)', // Orange color
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Parallel Processing (seconds)',
+                    data: [0.03, 0.20, 1.2, 8.5], // Timings for parallel
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)', // Teal color
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }
+            ]
+        };
+
+        // Chart Options
+        const options2 = {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top', // Position of the legend
+                },
+                title: {
+                    display: true,
+                    text: 'Comparison of Matrix Multiplication Times'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Time (seconds)'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Matrix Size'
+                    }
+                }
+            }
+        };
+
+        // Initialize Chart.js
+        const ctx2 = document.getElementById('matrixMultiplicationChart').getContext('2d');
+        const matrixMultiplicationChart = new Chart(ctx2, {
+            type: 'bar', // Bar chart type
+            data: data2,
+            options: options2
+        });
+    </script>
+
+
+<script>
+    // Data
+    const complexities = [20, 25, 30];
+    const meanTimes = [0.0064, 0.065, 0.7461];
+    const medianTimes = [0.0064, 0.0646, 0.7459];
+    const stdDeviations = [0.0002, 0.0025, 0.006];
+
+    // Chart configuration
+    const data3 = {
+      labels: complexities,
+      datasets: [
+        {
+          label: 'Mean Time (seconds)',
+          data: meanTimes,
+          borderColor: 'rgba(75, 192, 192, 1)',
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderWidth: 2,
+          fill: true,
+        },
+        {
+          label: 'Median Time (seconds)',
+          data: medianTimes,
+          borderColor: 'rgba(153, 102, 255, 1)',
+          backgroundColor: 'rgba(153, 102, 255, 0.2)',
+          borderWidth: 2,
+          fill: true,
+        },
+        {
+          label: 'Standard Deviation (seconds)',
+          data: stdDeviations,
+          borderColor: 'rgba(255, 159, 64, 1)',
+          backgroundColor: 'rgba(255, 159, 64, 0.2)',
+          borderWidth: 2,
+          fill: true,
+        }
+      ]
+    };
+
+    const confi = {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Performance Metrics vs. Complexity',
+            font: {
+              size: 18
+            }
+          },
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Complexity',
+              font: {
+                size: 14
+              }
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Time (seconds)',
+              font: {
+                size: 14
+              }
+            },
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // Render the chart
+    const ctx3 = document.getElementById('performanceChart').getContext('2d');
+    new Chart(ctx3, config);
+  </script>
 </body>
 </html>
